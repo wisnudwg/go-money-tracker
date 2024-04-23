@@ -5,7 +5,6 @@ import (
 	"go-money-tracker/initializers"
 	mw "go-money-tracker/middleware"
 	"net/http"
-	"os"
 	"time"
 
 	"github.com/gin-contrib/cors"
@@ -21,8 +20,8 @@ func init() {
 func main() {
 	r := gin.Default()
 	r.Use(cors.New(cors.Config{
-		// AllowOrigins:     []string{"http://localhost:5173", "http://localhost:5173/"},
-		AllowOrigins:     []string{os.Getenv("FE_ORIGIN")},
+		AllowOrigins: []string{"http://localhost:5173", "http://localhost:5173/", "https://vue-money-tracker-tt7q.vercel.app", "https://vue-money-tracker-tt7q.vercel.app/"},
+		// AllowOrigins:     []string{os.Getenv("FE_ORIGIN")},
 		AllowMethods:     []string{"GET", "DELETE", "OPTIONS", "POST", "PATCH", "PUT"},
 		AllowHeaders:     []string{"*"},
 		ExposeHeaders:    []string{"Content-Length"},
