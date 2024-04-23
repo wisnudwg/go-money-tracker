@@ -4,6 +4,7 @@ import (
 	cs "go-money-tracker/controllers"
 	"go-money-tracker/initializers"
 	mw "go-money-tracker/middleware"
+	"net/http"
 	"time"
 
 	"github.com/gin-contrib/cors"
@@ -29,6 +30,12 @@ func main() {
 		// },
 		MaxAge: 12 * time.Hour,
 	}))
+
+	r.GET("/", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "money-tracker-backend",
+		})
+	})
 
 	// USER-RELATED ROUTES
 	r.POST("/register", cs.Register)
