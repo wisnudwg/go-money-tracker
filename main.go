@@ -20,7 +20,7 @@ func init() {
 func main() {
 	r := gin.Default()
 	r.Use(cors.New(cors.Config{
-		AllowOrigins: []string{"http://localhost:5173", "http://localhost:5173/", "https://vue-money-tracker-tt7q.vercel.app", "https://vue-money-tracker-tt7q.vercel.app/"},
+		AllowOrigins: []string{"http://localhost:5173", "http://localhost:5173/", "https://vue-money-tracker-tt7q.vercel.app", "https://vue-money-tracker-tt7q.vercel.app/", "https://vue-money-tracker-tt7q-4iyn9q01h-wisnudwgs-projects.vercel.app", "https://vue-money-tracker-tt7q-4iyn9q01h-wisnudwgs-projects.vercel.app/"},
 		// AllowOrigins:     []string{os.Getenv("FE_ORIGIN")},
 		AllowMethods:     []string{"GET", "DELETE", "OPTIONS", "POST", "PATCH", "PUT"},
 		AllowHeaders:     []string{"*"},
